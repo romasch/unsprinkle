@@ -8,7 +8,7 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
           <picture>
               <source type={"image/avif"} srcSet={[src.replace(".jpg", ".avif 1x"), src.replace(".jpg", "@2x.avif 2x"), src.replace(".jpg", "@3x.avif 3x")].join(", ")}/>
               <source type={"image/jpg"} srcSet={[src.replace(".jpg", ".jpg 1x"), src.replace(".jpg", "@2x.jpg 2x"), src.replace(".jpg", "@3x.jpg 3x")].join(", ")}/>
-              <Image src={src} />
+              <Image src={src} alt={alt} />
           </picture>
       </Anchor>
       <Tags>
